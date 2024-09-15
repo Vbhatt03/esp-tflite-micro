@@ -96,7 +96,10 @@ idf_component_register(
                          "signal/micro/kernels"
                          "signal/src"
                          "signal/src/kiss_fft_wrappers"
-            REQUIRES ${pub_req}
+            REQUIRES esp_wifi
+		     esp_http_server
+		     nvs_flash
+                     ${pub_req}
             PRIV_REQUIRES ${priv_req})
 
 # Reduce the level of paranoia to be able to compile TF sources
